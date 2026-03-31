@@ -7,6 +7,13 @@ def get_request(url, auth):
     response = requests.get(url=url, auth=auth)
     return response.json()
 
+def get_request_booking_id(url, auth, headers, in_json):
+    get_response = requests.get(url=url, auth=auth, headers=headers)
+    if in_json is True:
+        return get_response.json()
+
+    return get_response
+
 
 def post_request(url, auth, headers, payload, in_json):
     post_response = requests.post(url=url, auth=auth, headers=headers, data=json.dumps(payload))

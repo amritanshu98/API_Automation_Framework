@@ -6,7 +6,6 @@
 
 # Verify that created booking id when we update we are able to update it and delete it also
 
-import pytest
 import allure
 
 from src.helpers.api_requests_wrapper import *
